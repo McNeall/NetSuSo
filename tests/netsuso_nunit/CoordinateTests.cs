@@ -15,6 +15,8 @@ public class CoordinateTests
 
 
 
+    // Run a certain test of this set with
+    // dotnet test -- NUnit.Where="name=='ValidCoordianteTests(0,0)'"
     [Test, TestCaseSource(nameof(rowColumnList))]
     public void ValidCoordianteTests(int row, int column)
     {
