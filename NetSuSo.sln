@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{666AB1CF-1FC6-4B0D-B3FB-EE32B0DCB3A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "netsuso", "src\netsuso\netsuso.csproj", "{0060653C-1201-4A20-B408-09967E62BCC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3BF9148F-651B-4199-A492-9170230D1F81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netsuso_nunit", "tests\netsuso_nunit\netsuso_nunit.csproj", "{DD19F900-99DF-4763-8496-C09BCB8B94DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0060653C-1201-4A20-B408-09967E62BCC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0060653C-1201-4A20-B408-09967E62BCC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0060653C-1201-4A20-B408-09967E62BCC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0060653C-1201-4A20-B408-09967E62BCC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD19F900-99DF-4763-8496-C09BCB8B94DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD19F900-99DF-4763-8496-C09BCB8B94DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD19F900-99DF-4763-8496-C09BCB8B94DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD19F900-99DF-4763-8496-C09BCB8B94DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0060653C-1201-4A20-B408-09967E62BCC6} = {666AB1CF-1FC6-4B0D-B3FB-EE32B0DCB3A2}
+		{DD19F900-99DF-4763-8496-C09BCB8B94DA} = {3BF9148F-651B-4199-A492-9170230D1F81}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD993206-3AD3-43F4-880F-D848B5DA2F67}
+	EndGlobalSection
+EndGlobal
