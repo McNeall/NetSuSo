@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <InternalsVisibleTo Include="$(AssemblyName)_nunit" />
+    <InternalsVisibleTo Include="$(AssemblyName)_xunit" />
+  </ItemGroup>
+
+
 </Project>
