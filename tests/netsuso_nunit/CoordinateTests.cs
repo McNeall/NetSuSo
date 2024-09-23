@@ -10,8 +10,43 @@ internal class CoordinateTestsData
     {
         get
         {
-            yield return new TestCaseData(0, 0).SetName("both_zero");
-            yield return new TestCaseData(0, 0).SetName("one_and_zero");
+
+            IEnumerable<int> values = Enumerable.Range(0, 9);
+            IEnumerable<TestCaseData> validRowColumnCombinations = values.SelectMany(e => values, (row, column) => new TestCaseData(row, column).SetName($"({row}, {column})"));
+            foreach (var data in validRowColumnCombinations) yield return data;
+        }
+    }
+
+    public static IEnumerable<TestCaseData> InvalidRowCoordiantes
+    {
+        get
+        {
+            yield return new TestCaseData(-1, 5);
+            yield return new TestCaseData(9, 3);
+            yield return new TestCaseData(100, 3);
+            yield return new TestCaseData(-20, 3);
+        }
+    }
+
+    public static IEnumerable<TestCaseData> InvalidColumnCoordiantes
+    {
+        get
+        {
+            yield return new TestCaseData(3, -1);
+            yield return new TestCaseData(6, 9);
+            yield return new TestCaseData(3, 102);
+            yield return new TestCaseData(3, -20);
+        }
+    }
+
+    public static IEnumerable<TestCaseData> InvalidRowAndColumnCoordiantes
+    {
+        get
+        {
+            yield return new TestCaseData(9, -1);
+            yield return new TestCaseData(-2, 10);
+            yield return new TestCaseData(-5, -6);
+            yield return new TestCaseData(100, 20);
         }
     }
 }
@@ -20,28 +55,7 @@ internal class CoordinateTestsData
 
 public class CoordinateTests
 {
-    [SetUp]
-    public void Setup()
-    {
-    }
 
-    private static readonly int[][] rowColumnList = { [0, 0], [1, 6] };
-
-    // Run a certain test of this set with
-    // dotnet test -- NUnit.Where="name=='ValidCoordianteTests(0,0)'"
-    // [Test, TestCaseSource(nameof(rowColumnList))]
-    // public void ValidCoordianteTests(int row, int column)
-    // {
-    //     Coordinate coord = new Coordinate(row, column);
-    //     using (new AssertionScope())
-    //     {
-    //         coord.Row.Should().Be(row);
-    //         coord.Row.Should().Be(5);
-    //     }
-    // }
-
-    // Run a certain test of this set with
-    // dotnet test -- NUnit.Where="name=='ValidCoordianteTests(0,0)'"
     [Test, TestCaseSource(typeof(CoordinateTestsData), nameof(CoordinateTestsData.ValidCoordiantes))]
     public void ValidCoordianteTests(int row, int column)
     {
@@ -49,8 +63,47 @@ public class CoordinateTests
         using (new AssertionScope())
         {
             coord.Row.Should().Be(row);
-            coord.Row.Should().Be(5);
+            coord.Column.Should().Be(column);
         }
+    }
 
+    [Test, TestCaseSource(typeof(CoordinateTestsData), nameof(CoordinateTestsData.InvalidRowCoordiantes))]
+    public void InvalidRowCoordianteTests(int row, int column)
+    {
+        Action createCoordiante = () => new Coordinate(row, column);
+
+        createCoordiante
+            .Should().Throw<ArgumentException>()
+            .WithMessage($"""
+                Expecting a value betwenn 0 and 8. (Parameter 'row')
+                Actual value was {row}.
+                """);
+    }
+
+
+    [Test, TestCaseSource(typeof(CoordinateTestsData), nameof(CoordinateTestsData.InvalidRowAndColumnCoordiantes))]
+    public void InvalidColumnCoordianteTests(int row, int column)
+    {
+        Action createCoordiante = () => new Coordinate(row, column);
+
+        createCoordiante
+            .Should().Throw<ArgumentException>()
+            .WithMessage($"""
+                Expecting a value betwenn 0 and 8. (Parameter 'column')
+                Actual value was {column}.
+                """);
+    }
+
+    [Test, TestCaseSource(typeof(CoordinateTestsData), nameof(CoordinateTestsData.InvalidColumnCoordiantes))]
+    public void InvalidRowAndColumnCoordianteTests(int row, int column)
+    {
+        Action createCoordiante = () => new Coordinate(row, column);
+
+        createCoordiante
+            .Should().Throw<ArgumentException>()
+            .WithMessage($"""
+                Expecting a value betwenn 0 and 8. (Parameter 'column')
+                Actual value was {column}.
+                """);
     }
 }
