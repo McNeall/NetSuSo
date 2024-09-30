@@ -1,4 +1,6 @@
-- name: Introduction
-  href: introduction.md
 - name: Getting Started
   href: getting-started.md
+- name: Usage Examples
+  href: examples.md
+- name: License
+  href: ../LICENSE.md
