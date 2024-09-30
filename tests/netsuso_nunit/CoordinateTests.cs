@@ -56,6 +56,11 @@ internal class CoordinateTestsData
 public class CoordinateTests
 {
 
+    /**
+    <summary>Test that coordinates are correctly created from valid row and column indices.</summary>
+    <param name="row">A valid row index.</param>
+    <param name="column">A valid column index.</param
+    */
     [Test, TestCaseSource(typeof(CoordinateTestsData), nameof(CoordinateTestsData.ValidCoordiantes))]
     public void ValidCoordianteTests(int row, int column)
     {
@@ -67,6 +72,12 @@ public class CoordinateTests
         }
     }
 
+
+    /**
+    <summary>Test error handling for invalid row indices.</summary>
+    <param name="row">An invalid row index.</param>
+    <param name="column">A valid column index.</param
+    */
     [Test, TestCaseSource(typeof(CoordinateTestsData), nameof(CoordinateTestsData.InvalidRowCoordiantes))]
     public void InvalidRowCoordianteTests(int row, int column)
     {
@@ -81,7 +92,12 @@ public class CoordinateTests
     }
 
 
-    [Test, TestCaseSource(typeof(CoordinateTestsData), nameof(CoordinateTestsData.InvalidRowAndColumnCoordiantes))]
+    /**
+    <summary>Test error handling for invalid column indices.</summary>
+    <param name="row">A valid row index.</param>
+    <param name="column">An invalid column index.</param
+    */
+    [Test, TestCaseSource(typeof(CoordinateTestsData), nameof(CoordinateTestsData.InvalidColumnCoordiantes))]
     public void InvalidColumnCoordianteTests(int row, int column)
     {
         Action createCoordiante = () => new Coordinate(row, column);
@@ -94,7 +110,12 @@ public class CoordinateTests
                 """);
     }
 
-    [Test, TestCaseSource(typeof(CoordinateTestsData), nameof(CoordinateTestsData.InvalidColumnCoordiantes))]
+    /**
+    <summary>Test error handling for invalid row and column indices.</summary>
+    <param name="row">An invalid row index.</param>
+    <param name="column">An invalid column index.</param
+    */
+    [Test, TestCaseSource(typeof(CoordinateTestsData), nameof(CoordinateTestsData.InvalidRowAndColumnCoordiantes))]
     public void InvalidRowAndColumnCoordianteTests(int row, int column)
     {
         Action createCoordiante = () => new Coordinate(row, column);
@@ -102,8 +123,8 @@ public class CoordinateTests
         createCoordiante
             .Should().Throw<ArgumentException>()
             .WithMessage($"""
-                Expecting a value betwenn 0 and 8. (Parameter 'column')
-                Actual value was {column}.
+                Expecting a value betwenn 0 and 8. (Parameter 'row')
+                Actual value was {row}.
                 """);
     }
 }

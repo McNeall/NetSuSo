@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Frozen;
-using System.Text;
 using System.Globalization;
+using System.Text;
 
 namespace NetSuSo;
 
@@ -196,7 +196,7 @@ public class Board : IEnumerable<Cell>
             {
                 invalidPositions[indexValue.Index] = indexValue.Value;
             }
-            length = indexValue.Index;
+            length++;
         }
         if (length != BoardDim * BoardDim) throw new ArgumentException($"Expected exactly {BoardDim * BoardDim} characters, but found {length}.", nameof(input));
         if (invalidPositions.Count > 0)
@@ -412,7 +412,7 @@ public class Board : IEnumerable<Cell>
 
 
 
-class BoardFormatter
+public static class BoardFormatter
 {
 
     private static readonly CompositeFormat UnicodeTemplate = CompositeFormat.Parse("""
@@ -437,9 +437,15 @@ class BoardFormatter
     └───┴───┴───┴───┴───┴───┴───┴───┴───┘
     """);
 
-    public static string UnicodeRepresentation(Board board)
+
+    /**
+    <summary>Returns a representation of the current values of <paramref name="board"/> using unicode boxdrawing characters</summary>
+    <param name="boar">The <see cref="Board"/> for which the representation should be generated.</param>
+    */
+    public static string UnicodeRepresentation(this Board board)
     {
-        return string.Format(CultureInfo.InvariantCulture, UnicodeTemplate, board.Select(x => x.Value.ToString("D1", CultureInfo.InvariantCulture)).ToArray());
+        object[] formattedValues = board.Select(x => x.Value.ToString("D1", CultureInfo.InvariantCulture)).ToArray();
+        return string.Format(CultureInfo.InvariantCulture, UnicodeTemplate, formattedValues);
     }
 
 }

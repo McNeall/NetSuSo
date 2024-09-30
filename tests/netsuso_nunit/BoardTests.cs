@@ -1,5 +1,3 @@
-
-
 using System.Collections.Frozen;
 
 using FluentAssertions;
@@ -52,252 +50,45 @@ public class SharedBoardTestData
         };
 
     public int[] EnumerableRawValidValues { get; } = [
-            0,
-        5,
-        0,
-        7,
-        0,
-        3,
-        0,
-        6,
-        0,
-        0,
-        0,
-        7,
-        0,
-        0,
-        0,
-        8,
-        0,
-        0,
-        0,
-        0,
-        0,
-        8,
-        1,
-        6,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        3,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        5,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        7,
-        3,
-        0,
-        0,
-        4,
-        0,
-        0,
-        8,
-        6,
-        9,
-        0,
-        6,
-        0,
-        0,
-        0,
-        2,
-        0,
-        4,
-        8,
-        4,
-        0,
-        5,
-        7,
-        2,
-        0,
-        9,
-        3,
-        0,
-        0,
-        0,
-        4,
-        0,
-        9,
-        0,
-        0,
-        0
+        #pragma warning disable format
+        0, 5, 0, 7, 0, 3, 0, 6, 0,
+        0, 0, 7, 0, 0, 0, 8, 0, 0,
+        0, 0, 0, 8, 1, 6, 0, 0, 0,
+        0, 0, 0, 0, 3, 0, 0, 0, 0,
+        0, 0, 5, 0, 0, 0, 1, 0, 0,
+        7, 3, 0, 0, 4, 0, 0, 8, 6,
+        9, 0, 6, 0, 0, 0, 2, 0, 4,
+        8, 4, 0, 5, 7, 2, 0, 9, 3,
+        0, 0, 0, 4, 0, 9, 0, 0, 0
+        #pragma warning restore format
     ];
 
     public int[] EnumerableRawInvalidLength { get; } = [
-    0,
-        5,
-        0,
-        7,
-        0,
-        3,
-        0,
-        6,
-        0,
-        0,
-        0,
-        7,
-        0,
-        0,
-        0,
-        8,
-        0,
-        0,
-        0,
-        0,
-        0,
-        8,
-        1,
-        6,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        3,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        5,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        7,
-        3,
-        0,
-        0,
-        4,
-        0,
-        0,
-        8,
-        6,
-        9,
-        0,
-        6,
-        0,
-        0,
-        0,
-        2,
-        0,
-        4,
-        8,
-        4,
-        0,
-        5,
-        7,
-        2,
-        0,
-        9,
-        3,
-        0,
-        0,
-        0,
-        4,
-        0,
-        9,
+        #pragma warning disable format
+        0, 5, 0, 7, 0, 3, 0, 6, 0,
+        0, 0, 7, 0, 0, 0, 8, 0, 0,
+        0, 0, 0, 8, 1, 6, 0, 0, 0,
+        0, 0, 0, 0, 3, 0, 0, 0, 0,
+        0, 0, 5, 0, 0, 0, 1, 0, 0,
+        7, 3, 0, 0, 4, 0, 0, 8, 6,
+        9, 0, 6, 0, 0, 0, 2, 0, 4,
+        8, 4, 0, 5, 7, 2, 0, 9, 3,
+        0, 0, 0, 4, 0, 9
+        #pragma warning restore format
     ];
 
     public int[] EnumerableRawInvalidValues = [
-            0,
-        5,
-        -1,
-        7,
-        0,
-        3,
-        0,
-        6,
-        0,
-        0,
-        0,
-        7,
-        0,
-        0,
-        0,
-        8,
-        0,
-        0,
-        0,
-        0,
-        0,
-        8,
-        1,
-        6,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        3,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        5,
-        10,
-        0,
-        0,
-        1,
-        0,
-        0,
-        7,
-        3,
-        0,
-        0,
-        4,
-        0,
-        0,
-        8,
-        6,
-        9,
-        0,
-        6,
-        0,
-        0,
-        0,
-        2,
-        0,
-        4,
-        8,
-        4,
-        20,
-        5,
-        7,
-        2,
-        0,
-        9,
-        3,
-        0,
-        0,
-        0,
-        4,
-        0,
-        9,
-        0,
-        0,
-        99
+        #pragma warning disable format
+        0, 5, -1, 7, 0, 3, 0, 6, 0,
+        0, 0, 7, 0, 0, 0, 8, 0, 0,
+        0, 0, 0, 8, 1, 6, 0, 0, 0,
+        0, 0, 0, 0, 3, 0, 0, 0, 0,
+        0, 0, 5, 10, 0, 0, 1, 0, 0,
+        7, 3, 0, 0, 4, 0, 0, 8, 6,
+        9, 0, 6, 0, 0, 0, 2, 0, 4,
+        8, 4, 20, 5, 7, 2, 0, 9, 3,
+        0, 0, 0, 4, 0, 9, 0, 0, 99
+        #pragma warning restore format
     ];
 
     public string StringRawValidValues { get; } = "050703060007000800000816000000030000005000100730040086906000204840572093000409000";
@@ -331,8 +122,11 @@ public class BoardTests
     }
 
 
+    /**
+    <summary>Test <see cref="Board.FromMatrix(int[,])"/> method with invalid values.</summary>
+    */
     [Test]
-    public void TestCreateBoardFromNestedListWithInvalidValues()
+    public void TestCreateBoardFromMatrixWithInvalidValues()
     {
 
         Action createBoardFromMatrix = () => Board.FromMatrix(_sharedValues.MatrixRawInvalidValues);
@@ -346,8 +140,11 @@ public class BoardTests
                                         """);
     }
 
+    /**
+    <summary>Test <see cref="Board.FromMatrix(int[,])"/> method with invalid number of rows.</summary>
+    */
     [Test]
-    public void TestCreateBoardFromNestedListWithInvalidNumberOfRows()
+    public void TestCreateBoardMatrixWithInvalidNumberOfRows()
     {
 
         Action createBoardFromMatrix = () => Board.FromMatrix(_sharedValues.MatrixRawInvalidNumberOfRows);
@@ -356,8 +153,11 @@ public class BoardTests
                              .WithMessage("Expected exactly 9 rows, but found 2. (Parameter 'input')");
     }
 
+    /**
+    <summary>Test <see cref="Board.FromMatrix(int[,])"/> method with invalid number of columns.</summary>
+    */
     [Test]
-    public void TestCreateBoardFromNestedListWithInvalidNumberOfColumns()
+    public void TestCreateBoardFromMatrixInvalidNumberOfColumns()
     {
 
         Action createBoardFromMatrix = () => Board.FromMatrix(_sharedValues.MatrixRawInvalidNumberOfColumns);
@@ -366,7 +166,9 @@ public class BoardTests
                              .WithMessage("Expected exactly 9 columns, but found 3. (Parameter 'input')");
     }
 
-
+    /**
+    <summary>Test <see cref="Board.FromEnumerable(IEnumerable{int})"/> method with valid input.</summary>
+    */
     [Test]
     public void TestCreateBoardFromEnumerableWithValidValue()
     {
@@ -380,6 +182,9 @@ public class BoardTests
         }
     }
 
+    /**
+    <summary>Test error handling of <see cref="Board.FromEnumerable(IEnumerable{int})"/> method in case of invalid length of input.</summary>
+    */
     [Test]
     public void TestCreateBoardFromFlatArrayWithInvalidLength()
     {
@@ -387,6 +192,9 @@ public class BoardTests
         action.Should().Throw<ArgumentException>().WithMessage("Expected exactly 81 characters, but found 78. (Parameter 'input')");
     }
 
+    /**
+    <summary>Test error handling of <see cref="Board.FromEnumerable(IEnumerable{int})"/> method in case of invalid values in input.</summary>
+    */
     [Test]
     public void TestCreateBoardFromFlatArrayWithInvalidValue()
     {
@@ -401,6 +209,9 @@ public class BoardTests
         """);
     }
 
+    /**
+    <summary>Test <see cref="Board.FromString(string)"/> method with valid input string.</summary>
+    */
     [Test]
     public void TestCreateBoardFromValidString()
     {
@@ -415,6 +226,9 @@ public class BoardTests
         }
     }
 
+    /**
+    <summary>Test error handling of <see cref="Board.FromString(string)"/> method in case of invalid length of input string.</summary>
+    */
     [Test]
     public void TestCreateBoardFromInvalidLengthString()
     {
@@ -422,6 +236,9 @@ public class BoardTests
         action.Should().Throw<ArgumentException>().WithMessage("Expected exactly 81 characters, but found 78. (Parameter 'input')");
     }
 
+    /**
+    <summary>Test error handling of <see cref="Board.FromString(string)"/> method in case of invalid symbols in input string.</summary>
+    */
     [Test]
     public void TestCreateBoardFromInvalidValueString()
     {
@@ -431,11 +248,13 @@ public class BoardTests
         36: ?
         57: ä
         73: -
-        79: 亯 (Parameter 'values')
+        79: 亯 (Parameter 'input')
         """);
     }
 
-
+    /**
+    <summary>Test the <see cref="Board.AvailableColumnValues(int)"/> method with valid indices.</summary>
+    */
     [Test]
     public void TestAvailableColumnValues()
     {
@@ -450,6 +269,9 @@ public class BoardTests
         }
     }
 
+    /**
+    <summary>Test error handling of <see cref="Board.AvailableColumnValues(int)"/> method with invalid indices.</summary>
+    */
     [Test]
     public void TestAvailableColumnValuesInvalidIndex()
     {
@@ -459,7 +281,9 @@ public class BoardTests
         """);
     }
 
-
+    /**
+    <summary>Test the <see cref="Board.AvailableRowValues(int)"/> method with valid indices.</summary>
+    */
     [Test]
     public void TestAvailableRowValues()
     {
@@ -474,6 +298,9 @@ public class BoardTests
         }
     }
 
+    /**
+    <summary>Test the <see cref="Board.AvailableSquareValues(Coordinate)"/> method.</summary>
+    */
     [Test]
     public void TestAvailableSquareValues()
     {
@@ -496,6 +323,9 @@ public class BoardTests
         }
     }
 
+    /**
+    <summary>Test error handling of <see cref="Board.AvailableRowValues(int)"/> method with invalid index.</summary>
+    */
     [Test]
     public void TestAvailableRowValuesInvalidIndex()
     {
@@ -507,6 +337,9 @@ public class BoardTests
                 """);
     }
 
+    /**
+    <summary>Test the <see cref="Board.IsValid(Coordinate, int)"/> method with valid values.</summary>
+    */
     [Test]
     public void TestIsValidWithValidValue()
     {
@@ -514,6 +347,9 @@ public class BoardTests
         ValidBoard.IsValid(coordinate, 1).Should().BeTrue();
     }
 
+    /**
+    <summary>Test the <see cref="Board.IsValid(Coordinate, int)"/> method with invalid values.</summary>
+    */
     [Test]
     public void TestIsValidWithInvalidValue()
     {
@@ -521,6 +357,9 @@ public class BoardTests
         ValidBoard.IsValid(coordinate, 1).Should().BeTrue();
     }
 
+    /**
+    <summary>Test iterating throught he board</summary>
+    */
     [Test]
     public void TestBoardIterator()
     {
@@ -530,6 +369,9 @@ public class BoardTests
         }
     }
 
+    /**
+    <summary>Test getting board values by index</summary>
+    */
     [Test]
     public void TestBoardGettingByIndex()
     {
@@ -542,6 +384,9 @@ public class BoardTests
         }
     }
 
+    /**
+    <summary>Test setting a valid value.</summary>
+    */
     [Test]
     public void TestBoardSettingValidValueByIndex()
     {
@@ -550,6 +395,9 @@ public class BoardTests
         ValidBoard[coordinate].Should().Be(1, "because the empty value has been overwritten");
     }
 
+    /**
+    <summary>Test error handling in case of invalid values.</summary>
+    */
     [Test]
     public void TestBoardSettingInvalidValueByIndex()
     {
@@ -559,22 +407,29 @@ public class BoardTests
             .WithMessage("Invalid value for coordinate. Coordinate { Row = 0, Column = 0 }: 5");
     }
 
+    /**
+    <summary>Test unsetting previously set values works. See <see cref="BoardTests.TestBoardSettingValidValueByIndex"/> for just setting the valid value.</summary>
+    */
     [Test]
     public void TestBoardSettingValueAndUnsetting()
     {
         Coordinate coordinate = new Coordinate(8, 8);
         ValidBoard[coordinate] = 1;
+        ValidBoard[coordinate].Should().Be(1);
         ValidBoard[coordinate] = 0;
         ValidBoard[coordinate].Should().Be(0);
     }
 
+    /**
+    <summary>Test the board to string conversion using unicode box drawing characters.</summary>
+    */
     [Test]
     public void TestBoardRepresentation()
     {
 
         Board board = Board.FromMatrix(_sharedValues.MatrixRawValidValues);
 
-        string boardString = BoardFormatter.UnicodeRepresentation(board);
+        string boardString = board.UnicodeRepresentation();
         boardString.Should().Be("""
         ┌───┬───┬───┬───┬───┬───┬───┬───┬───┐
         │ 0 │ 5 │ 0 │ 7 │ 0 │ 3 │ 0 │ 6 │ 0 │
@@ -597,6 +452,5 @@ public class BoardTests
         └───┴───┴───┴───┴───┴───┴───┴───┴───┘
         """
         );
-        Console.WriteLine(boardString);
     }
 }
